@@ -1,0 +1,5 @@
+###
+POST http://localhost:4004/odata/v4/product/testnw
+
+###
+POST http://localhost:4004/odata/v4/product/testdest

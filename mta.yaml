@@ -28,6 +28,8 @@ modules:
     requires:
       - name: testcapmapp-auth
       - name: testcapmapp-db
+      - name: testcapmapp-destination
+      - name: testcapmapp-connectivity
 
   - name: testcapmapp-db-deployer
     type: hdb
@@ -56,3 +58,13 @@ resources:
     parameters:
       service: hana
       service-plan: hdi-shared
+  - name: testcapmapp-destination
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-plan: lite
+  - name: testcapmapp-connectivity
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: connectivity
+      service-plan: lite
